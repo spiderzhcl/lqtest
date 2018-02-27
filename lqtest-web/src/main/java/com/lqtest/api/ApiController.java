@@ -13,6 +13,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.datatables.mapping.DataTablesInput;
 import org.springframework.data.jpa.datatables.mapping.DataTablesOutput;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,7 +28,7 @@ import javax.validation.Valid;
 
 import static com.lqtest.tools.RandomUtil.RANDOM;
 
-@RestController
+@Controller
 @RequestMapping(path = "/api")
 public class ApiController {
 
@@ -40,6 +42,13 @@ public class ApiController {
     Iterable<TblApi> getAllApi() {
         // This returns a JSON or XML with the users
         return apiRepository.findAll();
+    }
+
+    @RequestMapping(path = "/request")
+    public String request(@RequestParam Long apiId,ModelMap model) {
+        TblApi api = apiRepository.findOne(apiId);
+        model.put("thisapi",api);
+        return "api/detail";
     }
 
 
@@ -58,8 +67,7 @@ public class ApiController {
     }
 
     @RequestMapping(path = "/listall", method = RequestMethod.POST)
-    public @ResponseBody
-    DataTablesOutput<TblApi> listallPOST(@Valid @RequestBody DataTablesInput input) {
+    public DataTablesOutput<TblApi> listallPOST(@Valid @RequestBody DataTablesInput input) {
         log.info("input : " + input + "   ");
         return apiRepository.findAll(input);
     }
@@ -81,9 +89,9 @@ public class ApiController {
     String addNewApi() {
 
         TblApi api = new TblApi();
-        api.setApiName(RandomUtil.randomString(RANDOM.nextInt(20)));
-        api.setEnable(RANDOM.nextInt(2));
-        api.setEnv(RANDOM.nextInt(3));
+        api.setTitle(RandomUtil.randomString(RANDOM.nextInt(20)));
+//        api.setActive(RANDOM.nextInt(2));
+//        api.setEnv(RANDOM.nextInt(3));
         api.setMockUrl("http://dohko.auth.hualala.com/" +RandomUtil.randomString(RANDOM.nextInt(10)) );
         apiRepository.save(api);
         return "Saved";

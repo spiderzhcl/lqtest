@@ -1,5 +1,9 @@
 package com.lqtest.common.entry;
 
+import com.lqtest.common.entry.myenum.Active;
+import com.lqtest.common.entry.myenum.ENV;
+import com.lqtest.common.entry.myenum.ReqType;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,13 +27,15 @@ public class TblApi {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long apiId;
 
-    private String apiName;
+    private ENV env;
+    private String  title;
+    private ReqType type;
+    private String  reqUrl;
+    private String  mockUrl;
+    private Active active;
+    private Integer version;
+    private String  description;
 
-    private Integer env;
-
-    private String mockUrl;
-
-    private Integer enable;
 
 
 }

@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="css/lq/composition.css">
-    <link rel="stylesheet" href="assert/datatables.css">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="/css/lq/composition.css">
+    <link rel="stylesheet" href="/assert/datatables.css">
 
-    <title>HomePage</title>
+    <title>Detail</title>
 </head>
 <body>
 <header>
@@ -27,7 +27,7 @@
 <!-- Begin page content -->
 <main role="main" class="container">
     <div class="mt-5">&nbsp;</div>
-    <h1>Title: 接口列表</h1>
+    <h2>接口详情: ${thisapi.title}</h2>
     <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
         <tr>
@@ -55,11 +55,11 @@
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <!--<script src="js/jquery-3.3.1.min.js"></script>-->
-<script src="js/jquery-1.12.4.js"></script>
-<script src="js/bootstrap/popper.min.js"></script>
-<script src="js/bootstrap/bootstrap.min.js"></script>
-<script src="assert/datatables.js"></script>
-<script src="assert/jquery.spring-friendly.js"></script>
+<script src="/js/jquery-1.12.4.js"></script>
+<script src="/js/bootstrap/popper.min.js"></script>
+<script src="/js/bootstrap/bootstrap.min.js"></script>
+<script src="/assert/datatables.js"></script>
+<script src="/assert/jquery.spring-friendly.js"></script>
 <!--<script src="js/bootstrap/jquery.dataTables.min.js"></script>-->
 <!--<script src="js/bootstrap/dataTables.bootstrap4.min.js"></script>-->
 <script>
@@ -69,7 +69,9 @@
                                     "processing": true,
                                     "serverSide": true,
                                     "ajax": {
-                                        "url": "api/listall"
+                                        "url": "api/listall",
+                                        "type": "POST"
+//                                        "contentType":"application/json;charset=UTF-8"
                                     },
                                     "columns": [
                                         {"data": "apiId"},
@@ -80,7 +82,7 @@
                                         {
                                             "data": 'apiId',
                                             "render": function (apiId) {
-                                                return '<a href=\"api/request?apiId='+ apiId +'\">detail</a>';
+                                                return '<a href=\"api/request?id='+ apiId +'\">detail</a>';
                                             }
                                         }
                                     ]
