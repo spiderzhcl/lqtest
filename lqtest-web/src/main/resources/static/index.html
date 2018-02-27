@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/lq/composition.css">
+    <link rel="stylesheet" href="assert/datatables.css">
+    <!--<link rel="stylesheet" href="css/bootstrap/jquery.dataTables.min.css">-->
+    <!--<link rel="stylesheet" href="css/bootstrap/dataTables.bootstrap4.min.css">-->
+
+    <title>HomePage</title>
+</head>
+<body>
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Fixed navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search"
+                       aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</header>
+<!-- Begin page content -->
+<main role="main" class="container">
+    <div class="mt-5">&nbsp;</div>
+    <h1>Title: 接口列表</h1>
+    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+            <th>apiId</th>
+            <th>apiName</th>
+            <th>env</th>
+            <th>mockUrl</th>
+            <th>enable</th>
+            <th>link</th>
+        </tr>
+        </thead>
+    </table>
+</main>
+
+<tbody id="apilist-tbody-content">
+</tbody>
+
+
+<footer class="footer" id="footer">
+    <div class="container">
+        <span class="text-muted">这是底部栏......</span>
+    </div>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!--<script src="js/jquery-3.3.1.min.js"></script>-->
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/bootstrap/popper.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="assert/datatables.js"></script>
+<script src="assert/jquery.spring-friendly.js"></script>
+<!--<script src="js/bootstrap/jquery.dataTables.min.js"></script>-->
+<!--<script src="js/bootstrap/dataTables.bootstrap4.min.js"></script>-->
+<script>
+    function ajaxT(page) {
+        console.log("start call ajax....")
+        $.ajax({
+                   type: "GET",
+                   dataType: "json",
+                   url: "api/list",
+                   data: "size=10&page=" + page,
+                   success: function (data) {
+                       console.log(data);
+                       createShowingTable(data);
+                   },
+                   error: function (err) {
+                       console.log(err);
+                   }
+               });
+    }
+
+    function createShowingTable(data) {
+        var tbody = "";
+        var len = data.length;
+        for (var i = 0; i < len; i++) {
+            tbody = tbody + "<tr>"
+                    + "<td><input class='check' id='checkOne' name='checkOne' type='checkbox' value='"
+                    + data[i].apiId + "' /></td>"
+                    + "<td>" + data[i].apiId + "</td>"
+                    + "<td>" + data[i].apiName + "</td>"
+                    + "<td>" + data[i].env + "</td>"
+                    + "<td>" + data[i].mockUrl + "</td>"
+                    + "<td>" + data[i].enable + "</td>"
+                    + "</tr>";
+        }
+        if (len == 0) {
+            tbody = tbody + "<tr style='text-align: center'>"
+                    + "<td colspan='6'><font color='#cd0a0a'>暂无记录</font></td>"
+                    + "</tr>";
+        }
+        //添加到div中
+        $("#apilist-tbody-content").html(tbody);
+
+    }
+
+    //    ajaxT(1);
+    console.log("start javascript......")
+    $(document).ready(function () {
+        console.log("prepare call ajax.");
+        $('#example').DataTable({
+                                    "processing": true,
+                                    "serverSide": true,
+                                    "ajax": {
+                                        "url": "api/listall"
+//                                        "type": "POST"
+//                                        "contentType":"application/json;charset=UTF-8"
+                                    },
+                                    "columns": [
+                                        {"data": "apiId"},
+                                        {"data": "apiName"},
+                                        {"data": "env"},
+                                        {"data": "mockUrl"},
+                                        {"data": "enable"},
+                                        {
+                                            "data": 'apiId',
+                                            "render": function (apiId) {
+                                                return '<a href=\"module.html?id='+ apiId +'\">detail</a>';
+                                            }
+                                        }
+                                    ]
+                                });
+    });
+
+</script>
+</body>
+</html>
