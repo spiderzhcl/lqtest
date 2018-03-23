@@ -4,7 +4,6 @@ package com.lqtest.api;
 import com.lqtest.common.entry.ApiRepository;
 import com.lqtest.common.entry.ReqRepository;
 import com.lqtest.common.entry.TblApi;
-import com.lqtest.common.entry.TblReq;
 import com.lqtest.tools.RandomUtil;
 
 import org.apache.commons.logging.Log;

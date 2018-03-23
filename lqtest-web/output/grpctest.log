@@ -5154,3 +5154,6 @@ Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: 172.1
 	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
 	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
 	... 1 common frames omitted
+17:50:59.581 [Thread-19] [AbstractApplicationContext.java:987] - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e9fbf3f: startup date [Fri Mar 23 17:29:31 CST 2018]; root of context hierarchy
+17:50:59.583 [Thread-19] [MBeanExporter.java:449] - Unregistering JMX-exposed beans on shutdown
+17:50:59.585 [Thread-19] [AbstractEntityManagerFactoryBean.java:551] - Closing JPA EntityManagerFactory for persistence unit 'default'

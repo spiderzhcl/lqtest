@@ -4,8 +4,6 @@ import com.lqtest.common.entry.myenum.Active;
 import com.lqtest.common.entry.myenum.ENV;
 import com.lqtest.common.entry.myenum.ReqType;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

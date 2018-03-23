@@ -1,13 +1,11 @@
 package com.lqtest.service;
 
-import com.google.protobuf.Internal;
-
 import com.alibaba.fastjson.JSONObject;
 import com.hualala.grpc.HealthInterface;
 import com.hualala.grpc.ProtoConverter;
 import com.hualala.grpc.executor.pool.GrpcPool;
-import com.hualala.grpc.grpc.HealthInterfaceData.StatRes;
 import com.hualala.grpc.grpc.HealthInterfaceData.StatReq;
+import com.hualala.grpc.grpc.HealthInterfaceData.StatRes;
 import com.hualala.grpc.grpc.HealthInterfaceGrpc;
 import com.hualala.grpc.grpc.HealthInterfaceGrpc.HealthInterfaceBlockingStub;
 
@@ -15,11 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 import io.grpc.ManagedChannel;
-
-import static com.hualala.grpc.grpc.HealthInterfaceData.StatRes;
 
 @Service
 public class MonitorService {

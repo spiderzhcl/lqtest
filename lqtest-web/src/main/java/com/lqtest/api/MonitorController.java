@@ -1,8 +1,6 @@
 package com.lqtest.api;
 
-import com.alibaba.fastjson.JSONObject;
 import com.hualala.grpc.HealthInterface;
-import com.hualala.grpc.grpc.HealthInterfaceData;
 import com.lqtest.service.MonitorService;
 
 import org.apache.commons.logging.Log;
