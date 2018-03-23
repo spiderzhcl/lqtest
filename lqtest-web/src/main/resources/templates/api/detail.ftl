@@ -27,18 +27,34 @@
 <!-- Begin page content -->
 <main role="main" class="container">
     <div class="mt-5">&nbsp;</div>
-    <h2>接口详情: ${thisapi.title}</h2>
-    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+    <h2>接口名称: ${thisapi.title}</h2>
+    <h5>apiDetail</h5>
+    <table id="example" class="table table-detail table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
         <tr>
-            <th>apiId</th>
-            <th>title</th>
-            <th>env</th>
-            <th>mockUrl</th>
+            <th>ParamId</th>
+            <th>Name</th>
+            <th>parentId</th>
+            <th>Type</th>
+            <th>Scope</th>
+            <th>ScopeDetail</th>
             <th>active</th>
-            <th>link</th>
         </tr>
         </thead>
+        <tbody>
+        <#list apiDetail as detail>
+        <tr>
+            <td>${detail.reqId}-${detail.level}</td>
+            <td><span class="level${detail.level}"></span>${detail.name}</td>
+            <td>${detail.parentId}</td>
+            <td>${detail.type}</td>
+            <td>${detail.scope}</td>
+            <td>${detail.scopeDetail}</td>
+            <td>${detail.active}</td>
+        </tr>
+        </#list>
+        </tbody>
+
     </table>
 </main>
 
@@ -60,35 +76,5 @@
 <script src="/js/bootstrap/bootstrap.min.js"></script>
 <script src="/assert/datatables.js"></script>
 <script src="/assert/jquery.spring-friendly.js"></script>
-<!--<script src="js/bootstrap/jquery.dataTables.min.js"></script>-->
-<!--<script src="js/bootstrap/dataTables.bootstrap4.min.js"></script>-->
-<script>
-    $(document).ready(function () {
-        console.log("prepare call ajax.");
-        $('#example').DataTable({
-                                    "processing": true,
-                                    "serverSide": true,
-                                    "ajax": {
-                                        "url": "api/listall",
-                                        "type": "POST"
-//                                        "contentType":"application/json;charset=UTF-8"
-                                    },
-                                    "columns": [
-                                        {"data": "apiId"},
-                                        {"data": "title"},
-                                        {"data": "env"},
-                                        {"data": "mockUrl"},
-                                        {"data": "active"},
-                                        {
-                                            "data": 'apiId',
-                                            "render": function (apiId) {
-                                                return '<a href=\"api/request?id='+ apiId +'\">detail</a>';
-                                            }
-                                        }
-                                    ]
-                                });
-    });
-
-</script>
 </body>
 </html>

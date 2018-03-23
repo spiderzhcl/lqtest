@@ -1,8 +1,7 @@
 package com.lqtest.common.entry;
 
+import com.hualala.grpc.manager.DataType;
 import com.lqtest.common.entry.myenum.Active;
-import com.lqtest.common.entry.myenum.DataType;
-import com.lqtest.common.entry.myenum.ScopeType;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -30,9 +29,11 @@ public class TblReq {
     Long apiId;
     Long parentId; //如果存在父类，则你类的类型为Object
 
+    Integer level;
+
     String  name; //变量名
     DataType type;   //类型
-    ScopeType scope;  //范围
+    DataType scope;  //范围
     String  scopeDetail; //范围详情
     Active active; //是否激活
 

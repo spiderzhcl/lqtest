@@ -4,6 +4,8 @@ import com.lqtest.common.entry.myenum.Active;
 import com.lqtest.common.entry.myenum.ENV;
 import com.lqtest.common.entry.myenum.ReqType;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -31,10 +33,13 @@ public class TblApi {
     private String  title;
     private ReqType type;
     private String  reqUrl;
+    private String  classname;
     private String  mockUrl;
     private Active active;
     private Integer version;
     private String  description;
+
+//    private List<TblReq> requests;
 
 
 

@@ -94,11 +94,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.hualala.shop</groupId>
-            <artifactId>logical-log</artifactId>
-            <version>1.0.5</version>
-        </dependency>
-        <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.2.3</version>
@@ -120,11 +115,29 @@
             <artifactId>snakeyaml</artifactId>
             <version>1.16</version>
         </dependency>
+
         <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>3.4.5</version>
+            <groupId>com.hualala.shop</groupId>
+            <artifactId>grpctest</artifactId>
+            <version>1.0.0-SHAPSHOT</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.hualala.grpc</groupId>
+            <artifactId>health</artifactId>
+            <version>1.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hualala.rpc</groupId>
+            <artifactId>rpc-core-api</artifactId>
+            <version>1.1.2-RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hualala.grpc</groupId>
+            <artifactId>grpc-object-convertor</artifactId>
+            <version>1.2.4-RELEASE</version>
+        </dependency>
+
     </dependencies>
 
 

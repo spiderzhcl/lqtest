@@ -2,7 +2,9 @@ package com.lqtest.api;
 
 
 import com.lqtest.common.entry.ApiRepository;
+import com.lqtest.common.entry.ReqRepository;
 import com.lqtest.common.entry.TblApi;
+import com.lqtest.common.entry.TblReq;
 import com.lqtest.tools.RandomUtil;
 
 import org.apache.commons.logging.Log;
@@ -13,6 +15,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.datatables.mapping.DataTablesInput;
 import org.springframework.data.jpa.datatables.mapping.DataTablesOutput;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,8 +25,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 import javax.validation.Valid;
 
 import static com.lqtest.tools.RandomUtil.RANDOM;
@@ -37,6 +46,9 @@ public class ApiController {
     @Autowired
     private ApiRepository apiRepository;
 
+    @Autowired
+    private ReqRepository reqRepository;
+
     @GetMapping(path = "/all")
     public @ResponseBody
     Iterable<TblApi> getAllApi() {
@@ -44,10 +56,21 @@ public class ApiController {
         return apiRepository.findAll();
     }
 
-    @RequestMapping(path = "/request")
+    @RequestMapping(path = "/detail")
     public String request(@RequestParam Long apiId,ModelMap model) {
         TblApi api = apiRepository.findOne(apiId);
         model.put("thisapi",api);
+        Specification specification = new Specification<TblApi>() {
+            @Override
+            public Predicate toPredicate(Root<TblApi> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
+                List<Predicate> predicates = new ArrayList<>();
+                if(null != api.getApiId()){
+                    predicates.add(criteriaBuilder.equal(root.get("apiId"), api.getApiId()));
+                }
+                return criteriaBuilder.and(predicates.toArray(new Predicate[predicates.size()]));
+            }
+        };
+        model.put("apiDetail",reqRepository.findAll(specification));
         return "api/detail";
     }
 
