@@ -1,0 +1,311 @@
+18:10:46.168 [main] [GenTestCase.java:72] - WILL GenObject:  java.lang.reflect.Method
+18:10:46.286 [main] [GenTestCase.java:72] - WILL GenObject:  java.lang.reflect.Method
+18:11:31.758 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:11:31.769 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:11:31.981 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "f4146014-b88a-466c-891d-d5837939fbe8"
+}
+
+18:12:18.140 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:12:18.182 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:12:18.296 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "576a0efc-8830-47f9-b6c3-9d330a3557ce"
+}
+
+18:12:18.297 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:12:18.297 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:12:18.298 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "c6a789a6-b117-42ca-b809-1a6476b80542"
+}
+
+18:12:33.215 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:12:33.225 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:12:33.392 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "1d62710e-15d4-42af-b458-cab626675382"
+}
+
+18:12:33.392 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:12:33.393 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:12:33.393 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "097a255c-d86f-44cb-bb30-bfab9d1b3555"
+}
+
+18:12:46.986 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:12:46.996 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:12:47.153 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "749f070f-6ae1-4d02-abed-08445fedafd9"
+}
+
+18:12:47.155 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:12:47.155 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:12:47.156 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "42c1505b-eb0d-41f4-9c88-2fdca342e88e"
+}
+
+18:21:33.918 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:21:33.928 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:21:34.025 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "ad9e63c7-aecb-4584-932f-3aa15c1e8109"
+}
+
+18:21:34.026 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:21:34.026 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:21:34.026 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "877c08fc-de34-47b0-895b-249d89f415f2"
+}
+
+18:21:34.029 [main] [TestExeOne.java:25] - execute grpc method call
+18:21:34.120 [main] [GrpcClient.java:24] - GRPCCLIENT CREATE CHANNEL FOR TARGET dohko.permission.service.hualala.com:31664.
+18:21:34.379 [main] [TestExeOne.java:36] - 
+java.lang.IllegalArgumentException: supported grpcClass [null]
+	at com.hualala.grpc.grpc.GrpcClient.getStub(GrpcClient.java:58)
+	at com.hualala.grpc.grpc.GrpcClient.getBlockingStub(GrpcClient.java:43)
+	at com.hualala.grpc.executor.TestExeOne.test(TestExeOne.java:30)
+	at com.lqtest.casesuite.GenerateApi.main(GenerateApi.java:42)
+18:21:34.380 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:21:34.380 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:21:34.380 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "113ac247-a766-4e96-8bd3-5f1114f6b362"
+}
+
+18:21:34.381 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:21:34.381 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:21:34.381 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "3adf1eb3-085e-4dfe-b1c2-5d2197018a4a"
+}
+
+18:21:34.381 [main] [TestExeOne.java:25] - execute grpc method call
+18:21:34.381 [main] [TestExeOne.java:36] - 
+java.lang.IllegalArgumentException: supported grpcClass [null]
+	at com.hualala.grpc.grpc.GrpcClient.getStub(GrpcClient.java:58)
+	at com.hualala.grpc.grpc.GrpcClient.getBlockingStub(GrpcClient.java:43)
+	at com.hualala.grpc.executor.TestExeOne.test(TestExeOne.java:30)
+	at com.lqtest.casesuite.GenerateApi.main(GenerateApi.java:42)
+18:22:04.916 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:22:04.927 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:22:05.013 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "8b6e0464-e209-40c1-b7df-ae09567bf8c5"
+}
+
+18:22:05.014 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:22:05.014 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:22:05.014 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "bde15cd8-8ef8-45a5-99e6-31ba8aee2c1b"
+}
+
+18:22:05.016 [main] [TestExeOne.java:25] - execute grpc method call
+18:22:05.107 [main] [GrpcClient.java:24] - GRPCCLIENT CREATE CHANNEL FOR TARGET dohko.permission.service.hualala.com:31664.
+18:22:05.320 [main] [TestExeOne.java:36] - 
+java.lang.IllegalArgumentException: argument type mismatch
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.hualala.grpc.executor.TestExeOne.test(TestExeOne.java:31)
+	at com.lqtest.casesuite.GenerateApi.main(GenerateApi.java:43)
+18:22:05.321 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:22:05.321 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:22:05.322 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "a1e655fa-1a03-4270-84d4-b3dd795236dd"
+}
+
+18:22:05.322 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:22:05.322 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:22:05.323 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "5ee832df-f649-4737-b5fa-76b911fce392"
+}
+
+18:22:05.323 [main] [TestExeOne.java:25] - execute grpc method call
+18:22:05.323 [main] [TestExeOne.java:36] - 
+java.lang.IllegalArgumentException: argument type mismatch
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.hualala.grpc.executor.TestExeOne.test(TestExeOne.java:31)
+	at com.lqtest.casesuite.GenerateApi.main(GenerateApi.java:43)
+18:24:57.878 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:24:57.888 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:24:57.977 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "8b0048f2-1c44-440e-aa3b-caeaac702cf3"
+}
+
+18:24:57.978 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:24:57.978 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:24:57.978 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "e075b431-7d8c-49e4-bb97-49aa8e6f0958"
+}
+
+18:24:57.980 [main] [TestExeOne.java:25] - execute grpc method call
+18:24:58.065 [main] [GrpcClient.java:24] - GRPCCLIENT CREATE CHANNEL FOR TARGET localhost:6566.
+18:24:58.322 [main] [TestExeOne.java:36] - 
+java.lang.IllegalArgumentException: argument type mismatch
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.hualala.grpc.executor.TestExeOne.test(TestExeOne.java:31)
+	at com.lqtest.casesuite.GenerateApi.main(GenerateApi.java:45)
+18:24:58.323 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:24:58.323 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:24:58.324 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "cbb4b9c0-18fc-4720-bc8e-cedbcade4fcf"
+}
+
+18:24:58.324 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:24:58.324 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:24:58.325 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "6de2a148-cbdc-48ec-84ac-0f211aca5c26"
+}
+
+18:24:58.325 [main] [TestExeOne.java:25] - execute grpc method call
+18:24:58.325 [main] [TestExeOne.java:36] - 
+java.lang.IllegalArgumentException: argument type mismatch
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.hualala.grpc.executor.TestExeOne.test(TestExeOne.java:31)
+	at com.lqtest.casesuite.GenerateApi.main(GenerateApi.java:45)
+18:27:14.471 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:27:14.482 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:27:14.572 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "5dc65e96-f9d0-463e-8d6c-da8cda63b466"
+}
+
+18:27:14.573 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:27:14.573 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:27:14.574 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "add6afe9-edb7-4ea5-b758-976a41add4b9"
+}
+
+18:27:14.576 [main] [TestExeOne.java:25] - execute grpc method call
+18:27:14.660 [main] [GrpcClient.java:24] - GRPCCLIENT CREATE CHANNEL FOR TARGET localhost:6566.
+18:27:14.903 [main] [TestExeOne.java:36] - 
+java.lang.IllegalArgumentException: argument type mismatch
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.hualala.grpc.executor.TestExeOne.test(TestExeOne.java:31)
+	at com.lqtest.casesuite.GenerateApi.main(GenerateApi.java:45)
+18:27:14.904 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:27:14.904 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:27:14.905 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "5227be0f-4f5a-4a7e-be88-1befdf28501e"
+}
+
+18:27:14.905 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:27:14.905 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:27:14.905 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "d379c5bd-8ca6-4e48-9a3f-32a4d7592a75"
+}
+
+18:27:14.906 [main] [TestExeOne.java:25] - execute grpc method call
+18:27:14.906 [main] [TestExeOne.java:36] - 
+java.lang.IllegalArgumentException: argument type mismatch
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.hualala.grpc.executor.TestExeOne.test(TestExeOne.java:31)
+	at com.lqtest.casesuite.GenerateApi.main(GenerateApi.java:45)
+18:27:56.452 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:27:56.467 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:27:56.680 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "bc6acd07-8216-409c-bdf1-9775e94fd6c3"
+}
+
+18:29:38.853 [main] [TestExeOne.java:25] - execute grpc method call
+18:29:38.942 [main] [GrpcClient.java:24] - GRPCCLIENT CREATE CHANNEL FOR TARGET localhost:6566.
+18:29:39.182 [main] [TestExeOne.java:36] - 
+java.lang.IllegalArgumentException: argument type mismatch
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.hualala.grpc.executor.TestExeOne.test(TestExeOne.java:31)
+	at com.lqtest.casesuite.GenerateApi.main(GenerateApi.java:45)
+18:29:39.183 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:29:39.183 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:29:39.183 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "0393be7a-d1f7-46b9-9358-0042a0f68297"
+}
+
+18:29:43.015 [main] [TestExeOne.java:25] - execute grpc method call
+18:29:43.015 [main] [TestExeOne.java:36] - 
+java.lang.IllegalArgumentException: argument type mismatch
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.hualala.grpc.executor.TestExeOne.test(TestExeOne.java:31)
+	at com.lqtest.casesuite.GenerateApi.main(GenerateApi.java:45)
+18:34:47.269 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:34:47.280 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:34:47.376 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "5fb61bb6-1080-4985-b190-0769c0af3f1a"
+}
+requestip: "ZqcbR2OPzGeSlq4CRnuPmlCSrZQJX"
+
+18:34:47.378 [main] [TestExeOne.java:25] - execute grpc method call
+18:34:47.474 [main] [GrpcClient.java:24] - GRPCCLIENT CREATE CHANNEL FOR TARGET localhost:6566.
+18:34:47.746 [main] [TestExeOne.java:36] - 
+java.lang.IllegalArgumentException: argument type mismatch
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.hualala.grpc.executor.TestExeOne.test(TestExeOne.java:31)
+	at com.lqtest.casesuite.GenerateApi.main(GenerateApi.java:45)
+18:34:47.747 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:34:47.747 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:34:47.748 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "6c2056ef-45ed-4e1c-ac0f-06104bb746cb"
+}
+requestip: "q2Ix8jTGdcX4HukcJ"
+
+18:34:47.748 [main] [TestExeOne.java:25] - execute grpc method call
+18:34:47.748 [main] [TestExeOne.java:36] - 
+java.lang.IllegalArgumentException: argument type mismatch
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.hualala.grpc.executor.TestExeOne.test(TestExeOne.java:31)
+	at com.lqtest.casesuite.GenerateApi.main(GenerateApi.java:45)
+18:42:26.887 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.HealthInterfaceData$StatReq
+18:42:26.899 [main] [GenTestCase.java:72] - WILL GenObject:  com.hualala.grpc.grpc.Common$RequestHeader
+18:42:27.006 [main] [GenTestCase.java:43] - 
+header {
+  traceID: "9a79db8b-612b-4bbb-ab3f-1105ae23422c"
+}
+requestip: "luypRnU9jrKqmWphx8ZAr9wXE7Hz"
+
